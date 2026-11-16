@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumbn' Pastries</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="wrap">
+            <a href="" id="brand">
+                Crumbn' Pastries
+            </a>
+
+            <nav>
+                <a href="#main" class="navButt" onclick="goMain()">Home</a>
+                <a href="#menu" class="navButt" onclick="goMenu()">Menu</a>
+                <a href="#aboutus" class="navButt">About & Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Page -->
+    <div id="main">
+        <div id="intro">
+            <h1>Crumbn' Pastries</h1>
+            <h2>A little sweetness goes a long way!</h2>
+            <h3>Welcome to our online pastry shop! We offer a variety of freshly baked treats made with love and care.
+                From delicious pastries to soft and fluffy breads, we make sure every bite is worth enjoying.</h3>
+
+            <div id="button-holder">
+                <button id="see-menu" onclick="goMenu()">See the menu</button>
+                <button id="view-more">View us</button>
+            </div>
+        </div>
+        <div id="branding">
+            <img src="Images/CATAQUIS/Cookie.png" alt="" id="brand-picture">
+        </div>
+
+        <h1>Why you'll love us</h1>
+
+        <div id="bottom-section">
+            <div class="sector">
+                <img src="Images/CATAQUIS/BROWNIES(1).png" alt="">
+
+                <h1>Baked fresh daily</h1>
+                <h2>Every tray leaves the oven the same morning you enjoy it.</h2>
+            </div>
+            <div class="sector">
+                <img src="Images/CATAQUIS/Cheesecake(1).png" alt="">
+
+                <h1>Simple, real ingredients</h1>
+                <h2>Butter, farm eggs, pure vanilla and plenty of good chocolate.</h2>
+            </div>
+            <div class="sector">
+                <img src="Images/CATAQUIS/DONUTS.png" alt="">
+
+                <h1>Quality batches</h1>
+                <h2>We take extra care for each one</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu">
+        <div id="top-section">
+            <h1>Crumbn' Menu</h1>
+            <h2>You'll love these delicious pastry!</h2>
+        </div>
+
+        <div id="bottom-section">
+
+            <!--      Brownies      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/BROWNIES(1).png" alt="">
+                        <div class="product-info">
+                            <h3>Brownies</h3>
+                            <p>Price: 3$</p>
+                            <p>Serving: 3 pieces</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Brownies</h3>
+                        <span class="desc">Rich, fudgy and loaded with chocolate.</span>
+                        <p>Price: 3$</p>
+                        <p>Serving: 3 pieces</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--      Cookies      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/COOKIES.png" alt="">
+                        <div class="product-info">
+                            <h3>Crumbn' Cookies</h3>
+                            <p>Price: 5$</p>
+                            <p>Serving: 4 pieces</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Crumbn' Cookies</h3>
+                        <span class="desc">You choose the cookies!</span>
+                        <p>Price: 3$</p>
+                        <p>Serving: 4 pieces</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--      Donuts      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/DONUTS.png" alt="">
+                        <div class="product-info">
+                            <h3>Savory Donuts</h3>
+                            <p>Price: 5$</p>
+                            <p>Serving: 3 pieces</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Savory Donuts</h3>
+                        <span class="desc">You can choose from a variaty of flavors.</span>
+                        <p>Price: 5$</p>
+                        <p>Serving: 3 pieces</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--      Cheesecake      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/CHEESECAKE.png" alt="">
+                        <div class="product-info">
+                            <h3>Cheesecake</h3>
+                            <p>Price: 4$</p>
+                            <p>Serving: 1 piece</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Cheesecake</h3>
+                        <span class="desc">Rich with cheese!</span>
+                        <p>Price: 4$</p>
+                        <p>Serving: 1 piece</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--      Banana Bread      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/BANANA BREAD.png" alt="">
+                        <div class="product-info">
+                            <h3>Banana Bread</h3>
+                            <p>Price: 7$</p>
+                            <p>Serving: 1 piece</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Banana Bread</h3>
+                        <span class="desc">Delicious hint of banana!</span>
+                        <p>Price: 7$</p>
+                        <p>Serving: 1 piece</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--      Cupcakes      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/CUPCAKES.png" alt="">
+                        <div class="product-info">
+                            <h3>Cupcakes</h3>
+                            <p>Price: 5$</p>
+                            <p>Serving: 3 pieces</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Cupcakes</h3>
+                        <span class="desc">Delicious cream on top of a delicious cake!</span>
+                        <p>Price: 5$</p>
+                        <p>Serving: 3 pieces</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--      Muffin      -->
+            <div class="menu-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Images/CATAQUIS/Muffin.png" alt="">
+                        <div class="product-info">
+                            <h3>Muffin</h3>
+                            <p>Price: 1$</p>
+                            <p>Serving: 1 pieces</p>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Muffin</h3>
+                        <span class="desc">Delicious pastry filled with love!</span>
+                        <p>Price: 1$</p>
+                        <p>Serving: 1 piece</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About us Page -->
+    <div id="aboutus">
+        About us
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Crumbn’ Pastries. Baked with love.
+    </footer>
+
+
+    <script src="function.js"></script>
+
+</body>
+
+</html>

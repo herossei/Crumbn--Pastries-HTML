@@ -1,0 +1,423 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #2b1d22;
+    margin: 0px;
+    background-image: radial-gradient(#46353ade 1px, transparent  1px);
+    background-size: 24px 24px; 
+}
+
+header {
+    z-index: 100;
+    background-color: #33222a;
+    position: sticky;
+    border-bottom: 2px dashed #7a3a50;
+    top: env(safe-area-inset-top, 0px);
+    height: 3.8rem;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+#brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: 400 1.5rem Pacifico, cursive;
+    font-size: 2rem;
+    color: #ffb3c7;
+    text-decoration: none;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px
+}
+
+nav a {
+    padding: 6px 14px;
+    border-radius: 99px;
+    color: rgb(226, 226, 226);
+    font-weight: 700;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    text-decoration: none;
+    height: 2em;
+    text-align: center;
+    align-content: center;
+}
+
+nav a:hover {
+    background-color: rgb(242, 155, 180);
+}
+
+
+
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin: 0 auto;
+    height: auto;
+}
+
+#main h1 {
+    font: 400 1.5rem Pacifico, cursive;
+    color: #ffb3c7;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#intro {
+    max-width: 30em;
+}
+
+#intro h1 {
+    font: 400 1.5rem Pacifico, cursive;
+    color: #ffb3c7;
+    font-size: 4rem;
+    margin: 0px;
+}
+
+#intro h2 {
+    color: #cc8c9de8;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    margin: 0px;
+    font-size: 2rem;
+}
+
+#intro h3 {
+    color: #fddae4;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+#button-holder {
+    display: flex;
+    gap: 10px;
+}
+
+#see-menu {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 75px;
+    color: #2b1d22;
+    font-size: 15px;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f29bb4;
+    box-shadow: 0px 2px 2px 0px rgba(17, 17, 17, 0.863);
+}
+
+#view-more {
+    width: 100px;
+    height: 50px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 75px;
+    color: #f29bb4;
+    font-size: 15px;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #2b1d22;
+}
+
+#branding {
+    max-width: 30em;
+}
+
+#brand-picture {
+    height: 100%;
+    width: 100%;
+
+    z-index: 1;
+    object-fit: contain;
+
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10 and 11 */
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: transform 0.35s cubic-bezier(0.34, 1.8, 0.64, 1); /* springy overshoot on release */
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#bottom-section {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed #7a3a50;
+    border-radius: 20px;
+    height: 20rem;
+    background-color: #38262d;
+}
+
+.sector img {
+    height: 150px;
+    width: 150px;
+    margin: 0px;
+}
+
+#main .sector h1 {
+    color: rgb(221, 220, 220);
+    font: 700 1.15rem/1.65 Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+}
+
+#main .sector h2 {
+    color: rgba(194, 194, 194, 0.904);
+    font: 500 0.9rem/1.65 Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    background-color: #36252b;
+    position: static;
+    bottom: 0px;
+    border-top: 2px dashed #7a3a50;
+    height: 4.2rem;
+    max-height: auto;
+    width: 100%;
+    margin: 0px;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    color: #f0c0ce;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+}
+
+
+
+#menu {
+    display: none;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    margin: 0 auto;
+    height: auto;
+    flex-direction: column;
+}
+
+
+#menu #top-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#menu #top-section h1 {
+    color: #f8a3bb;
+    font-size: 5rem;
+    margin: 0px;
+    font-family: Pacifico, cursive;
+}
+
+#menu #top-section h2 {
+    font-size: 1rem;
+    margin: 0px;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    color: rgba(245, 179, 245, 0.712);
+    align-self: center;
+}
+
+#menu #bottom-section {
+    display: grid;
+    
+    /* 
+      1. auto-fit: Automatically fills the row with as many cards as possible.
+      2. minmax(220px, 1fr): Each card must be at least 220px wide, 
+         but will expand equally to share any extra space up to 1fr.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+
+    gap: 20px; 
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+
+
+.menu-card img {
+    object-fit: contain; 
+    
+    image-rendering: auto; 
+
+    width: 100%;
+    height: 200px; /* Lock the max height so all card boxes are uniform */
+    border-radius: 8px;
+
+    align-self: center;
+
+}
+
+.menu-card {
+    height: 20rem;
+    margin: 0px;
+    perspective: 1000px;          /* gives the rotation real depth */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* keeps both faces in 3D space */
+    transition: transform 0.6s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2.2px dashed rgba(219, 174, 181, 0.692);
+    background-color: rgb(56, 38, 45);
+    backface-visibility: hidden;          /* hide a face when it points away */
+    -webkit-backface-visibility: hidden;  /* Safari */
+}
+
+.card-back {
+    transform: rotateY(180deg);   /* pre-flipped, so it's right-way-round after the turn */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    background-color: rgb(70, 46, 57);
+}
+
+.card-back h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.3em;
+}
+
+.card-back .desc {
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #fddae4;
+    margin-bottom: 12px;
+}
+
+.card-back p {
+    margin: 4px 0 0 0;
+    color: #f0c0ce;
+    font-size: 0.9em;
+}
+
+.product-info {
+    background-color: rgb(56, 38, 45);
+    border: 2px dashed black;
+    height: 100%;
+    margin: 10px;
+    margin-top: 0px;
+    border-radius: 10px;
+}
+
+@media (hover: hover) {
+    .menu-card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (hover: none) {
+    .menu-card.flipped .card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+.menu-card p {
+    font-size: 0.8em;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    font-weight: 800;
+    color: #915168;
+}
+
+.menu-card h3 {
+    font-size: 1em;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-family: Quicksand, "Trebuchet MS", system-ui, sans-serif;
+    font-weight: 800;
+    color: #d8779a;
+}
+
+
+
+
+
+#aboutus {
+    display: none;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    margin: 0 auto;
+    height: auto;
+    flex-direction: column;
+    border: solid;
+}
