@@ -66,25 +66,60 @@ brandPicture.addEventListener("click", function (e) {
 });
 
 
-var currentPage = document.getElementById("main");
-
-function goMenu() {
-    currentPage.style.display = 'none';
-    
-    currentPage = document.getElementById("menu");
-
-    currentPage.style.display = 'flex';
-}
-
-function goMain() {
-    currentPage.style.display = 'none';
-
-    currentPage = document.getElementById("main");
-
-    currentPage.style.display = 'flex';
-}
-
 
 document.querySelectorAll('.menu-card').forEach(card => {
     card.addEventListener('click', () => card.classList.toggle('flipped'));
 });
+
+
+
+
+
+const reserveDialog = document.getElementById('reserveDialog');
+
+if (reserveDialog) {
+    const reserveBtn   = document.getElementById('reserveBtn');
+    const reserveForm  = document.getElementById('reserveForm');
+    const reserveDone  = document.getElementById('reserveDone');
+    const reserveDate  = document.getElementById('reserveDate');
+
+    // Can't book in the past: set the date input's min to today (local time)
+    const now = new Date();
+    reserveDate.min = new Date(now - now.getTimezoneOffset() * 60000)
+        .toISOString().split('T')[0];
+
+    reserveBtn.addEventListener('click', () => reserveDialog.showModal());
+
+    document.getElementById('reserveClose')
+        .addEventListener('click', () => reserveDialog.close());
+    document.getElementById('reserveDoneClose')
+        .addEventListener('click', () => reserveDialog.close());
+
+    // Click on the dark backdrop closes it
+    reserveDialog.addEventListener('click', (e) => {
+        if (e.target === reserveDialog) reserveDialog.close();
+    });
+
+    // Reset to the empty form every time it closes (button, Esc, or backdrop)
+    reserveDialog.addEventListener('close', () => {
+        reserveForm.reset();
+        reserveForm.hidden = false;
+        reserveDone.hidden = true;
+    });
+
+    reserveForm.addEventListener('submit', (e) => {
+        e.preventDefault();   // stop the page reloading
+        const data = new FormData(reserveForm);
+
+        const day = new Date(data.get('date') + 'T00:00')
+            .toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+        const time = new Date('1970-01-01T' + data.get('time'))
+            .toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+        document.getElementById('reserveSummary').textContent =
+            `Thanks, ${data.get('name')}! See you ${day} at ${time}.`;
+
+        reserveForm.hidden = true;
+        reserveDone.hidden = false;
+    });
+}
